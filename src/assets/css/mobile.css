@@ -1,3 +1,46 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 4em;
+  background: var(--blue2);
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 4em;
+  gap: 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 40px;
+  border: 1px solid var(--white);
+  height: 50px;
+  width: 50px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.nav-item {
+  padding: 2px;
+}
+
+.nav-link {
+  color: var(--white);
+  text-decoration: none;
+}
+
 footer {
   position: fixed;
   bottom: 0;
@@ -12,7 +55,7 @@ footer {
 
 footer div {
   position: relative;
-  background: var(--gray1);
+  background: var(--blue2);
   height: 20px;
   bottom: 0;
   right: 0;
