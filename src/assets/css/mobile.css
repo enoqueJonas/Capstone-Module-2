@@ -6,6 +6,14 @@ footer {
   padding-top: 25px;
   padding-bottom: 25px;
   color: var(--white);
-  background: var(--blue);
+  background: var(--blue2);
   width: 100%;
+}
+
+footer div {
+  position: relative;
+  background: var(--gray1);
+  height: 20px;
+  bottom: 0;
+  right: 0;
 }

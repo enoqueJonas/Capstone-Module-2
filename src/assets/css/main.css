@@ -3,7 +3,10 @@
 /* variables */
 :root {
   --white: #fff;
-  --blue: #00e;
+  --blue1: #00e;
+  --blue2: #0e72ed;
+  --gray1: #24292f;
+  --gray2: #424242;
   --font: "Montserrat", sans-serif;
 }
 
