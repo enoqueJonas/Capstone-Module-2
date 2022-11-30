@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Devanagari&family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap");
+
+/* variables */
+:root {
+  --white: #fff;
+  --blue: #00e;
+  --font: "Montserrat", sans-serif;
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body settings */
+body {
+  background: var(--white);
+  font-family: var(--font);
+  font-style: normal;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@import url("mobile.css");
+@import url("desktop.css");
