@@ -1,0 +1,64 @@
+/* variables */
+:root {
+  --white: #fff;
+  --black: black;
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body settings */
+body {
+  background: var(--white);
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 4em;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 4em;
+  gap: 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 40px;
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.nav-item {
+  padding: 2px;
+}
+
+.nav-link {
+  color: black;
+}
