@@ -1,12 +1,14 @@
 import closePng from '../../../assets/Img/close.png';
 import apiCall from './api.js';
 import loadMessage from './loadMessage.js';
+import createCommentsSection from './commentsSection';
 
 const content = document.getElementById('content');
 
 const renderCommentPopup = async (event) => {
   const pokname = event.target.id;
   loadMessage();
+  const commentsSectionItems = await createCommentsSection(event)
   const data = await apiCall(pokname);
   const commentPopup = `
 <div class="comments-popup">
@@ -30,13 +32,15 @@ const renderCommentPopup = async (event) => {
   </div>
 </div>
 <div class="comment-section">
-  
+
 </div>
 </div>`;
   content.insertAdjacentHTML('afterend', commentPopup);
   const closePopup = document.querySelector('.close-popup');
   const commentPopupDiv = document.querySelector('.comments-popup');
   const load = document.querySelector('.load');
+  const commentSectionDiv = document.querySelector('.comment-section');
+  commentSectionDiv.insertAdjacentHTML('afterend', commentsSectionItems);
   load.classList.remove('active');
   closePopup.addEventListener('click', () => {
     commentPopupDiv.classList.add('active');
