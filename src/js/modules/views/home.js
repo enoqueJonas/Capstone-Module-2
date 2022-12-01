@@ -28,7 +28,6 @@ const pokemonCard = (pokemon) => {
   const commentButton = createTag('button', 'Comments', 'comment-button', renderCommentPopup);
   commentButton.id = pokemon.name;
 
-
   const rowItems = [cardImage, titleDiv, cardSubtitle, newLigne, commentButton];
 
   for (let j = 0; j < rowItems.length; j += 1) {
@@ -60,7 +59,7 @@ const displayPokemon = () => {
   return home;
 };
 
-const renderHome = async() => {
+const renderHome = async () => {
   await content.appendChild(displayPokemon());
 };
 

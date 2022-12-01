@@ -5,9 +5,8 @@ const message = `
     Loading...
 </div>`;
 
-
 const loadMessage = () => {
-    content.insertAdjacentHTML('afterend', message);
+  content.insertAdjacentHTML('afterend', message);
 };
 
 export default loadMessage;

@@ -6,5 +6,3 @@ import '../assets/css/main.css';
 renderHeader();
 renderHome();
 renderFooter();
-
-
