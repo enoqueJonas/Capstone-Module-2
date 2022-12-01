@@ -76,16 +76,21 @@ body {
 }
 
 .comments-popup {
+  background-color: rgba(255, 255, 255, 1);
   border: 1px solid black;
   width: 35em;
   height: 40em;
   position: fixed;
-  top: 7em;
+  top: 4.5em;
   left: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
+}
+
+.comments-popup.active {
+  display: none;
 }
 
 .top {
@@ -105,6 +110,12 @@ body {
 .close-popup {
   margin-left: 70px;
   margin-right: 25px;
+  transition: all 0.2s ease-in-out;
+}
+
+.close-popup:hover {
+  transform: scale(1.2);
+  background-color: rgba(0, 0, 0, .2);
 }
 
 .middle {

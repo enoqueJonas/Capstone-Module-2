@@ -1,8 +1,11 @@
-const apiCall = require('./views/api.js')
 import closePng from '../../assets/Img/close.png'
+import apiCall from './views/api';
 
-const renderCommentPopup = async (pokemonName = " ") => {
-  const data = await apiCall(pokemonName);
+const content = document.getElementById('content');
+
+const renderCommentPopup = async () => {
+  const pokname = event.target.id;
+  const data = await apiCall(pokname);
   const commentPopup = `
 <div class="comments-popup">
 <div class="top">
@@ -25,7 +28,12 @@ const renderCommentPopup = async (pokemonName = " ") => {
   </div>
 </div>
 </div>`;
-  document.body.insertAdjacentHTML('afterend', commentPopup)
+  content.insertAdjacentHTML('afterend', commentPopup)
+  const closePopup = document.querySelector('.close-popup');
+  const commentPopupDiv = document.querySelector('.comments-popup');
+  closePopup.addEventListener('click', () => {
+    commentPopupDiv.classList.add('active');
+  })
 }
 
 export default renderCommentPopup;
