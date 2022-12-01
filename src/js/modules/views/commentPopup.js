@@ -29,6 +29,9 @@ const renderCommentPopup = async (event) => {
     <p class="pokemon-details pokemon-ability">Ability: ${data.abilities[0].ability.name}</p>
   </div>
 </div>
+<div class="comment-section">
+  
+</div>
 </div>`;
   content.insertAdjacentHTML('afterend', commentPopup);
   const closePopup = document.querySelector('.close-popup');

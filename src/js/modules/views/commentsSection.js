@@ -1,0 +1,1 @@
+import { getComments } from "./comments";
