@@ -1,6 +1,6 @@
 import closePng from '../../assets/Img/close.png';
 import apiCall from './api.js';
-import loadMessage from '../loadMessage.js';
+import loadMessage from './loadMessage.js';
 
 const content = document.getElementById('content');
 
