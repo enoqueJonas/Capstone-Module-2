@@ -1,10 +1,9 @@
 import renderHome from './modules/views/home.js';
-import '../assets/css/style.css';
 import renderHeader from './modules/views/header.js';
-import renderCommentPopup from './modules/commentPopup.js';
-
-const closePopup = document.querySelector('.close-popup');
+import renderFooter from './modules/views/footer.js';
+import '../assets/css/main.css';
 
 renderHeader();
 renderHome();
-renderCommentPopup();
+renderFooter();
+

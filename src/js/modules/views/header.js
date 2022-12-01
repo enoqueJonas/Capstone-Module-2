@@ -15,7 +15,7 @@ const header = `
       </header>
 `;
 const renderHeader = () => {
-  content.insertAdjacentHTML('beforeend', header);
+  content.insertAdjacentHTML('beforebegin', header);
 };
 
 export default renderHeader;
