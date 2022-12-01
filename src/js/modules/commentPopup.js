@@ -1,9 +1,9 @@
-const apiCall = require('./api.js')
+const apiCall = require('./views/api.js')
 import closePng from '../../assets/Img/close.png'
 
-const renderCommentPopup = async () => {
-    const data = await apiCall();
-    const commentPopup = `
+const renderCommentPopup = async (pokemonName = " ") => {
+  const data = await apiCall(pokemonName);
+  const commentPopup = `
 <div class="comments-popup">
 <div class="top">
   <img
@@ -25,7 +25,7 @@ const renderCommentPopup = async () => {
   </div>
 </div>
 </div>`;
-document.body.insertAdjacentHTML('afterend', commentPopup)
+  document.body.insertAdjacentHTML('afterend', commentPopup)
 }
 
 export default renderCommentPopup;

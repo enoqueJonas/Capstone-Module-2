@@ -1,5 +1,6 @@
 import apiCall from './api.js';
 import Pokemon from '../models/pokemon.js';
+import renderCommentPopup from '../commentPopup.js';
 
 const content = document.getElementById('content');
 
@@ -24,6 +25,8 @@ const pokemonCard = (pokemon) => {
   const cardSubtitle = createTag('span', `${pokemon.getLikeSentence()}`, 'card-subtitle');
   const newLigne = createTag('br', null, null);
   const commentButton = createTag('button', 'Comments', 'comment-button');
+  commentButton.id = pokemon.name;
+  commentButton.addEventListener("click", renderCommentPopup);
 
   const rowItems = [cardImage, titleDiv, cardSubtitle, newLigne, commentButton];
 
