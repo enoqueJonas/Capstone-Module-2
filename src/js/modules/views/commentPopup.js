@@ -17,8 +17,8 @@ const renderCommentPopup = async (event) => {
     src="${data.sprites.front_default}"
     alt=""
     class="pokemon-img"
-    width="220px"
-    Height="220px"
+    width="190px"
+    Height="190px"
   />
   <img src="${closePng}" alt="" class="close-popup" width="40px" height="40px" />
 </div>
@@ -32,15 +32,20 @@ const renderCommentPopup = async (event) => {
   </div>
 </div>
 <div class="comment-section">
-
+ <h3>
+  Comments(2)
+ </h3>
+ <div class="comments">
+ 
+ </div>
 </div>
 </div>`;
   content.insertAdjacentHTML('afterend', commentPopup);
   const closePopup = document.querySelector('.close-popup');
   const commentPopupDiv = document.querySelector('.comments-popup');
   const load = document.querySelector('.load');
-  const commentSectionDiv = document.querySelector('.comment-section');
-  commentSectionDiv.insertAdjacentHTML('afterend', commentsSectionItems);
+  const commentSectionDiv = document.querySelector('.comments');
+  commentSectionDiv.insertAdjacentHTML('beforeend', commentsSectionItems);
   load.classList.remove('active');
   closePopup.addEventListener('click', () => {
     commentPopupDiv.classList.add('active');

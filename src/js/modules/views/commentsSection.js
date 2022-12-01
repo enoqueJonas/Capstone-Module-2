@@ -6,7 +6,7 @@ const createCommentsSection = async (event) => {
     if (Array.isArray(comments)) {
         comments.forEach(comment => {
             list+= 
-            `<p>
+            `<p class="comments-items">
                 ${comment.creation_date} ${comment.username}: ${comment.comment}
             </p>`;
         });
