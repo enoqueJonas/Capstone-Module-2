@@ -1,14 +1,14 @@
 import closePng from '../../../assets/Img/close.png';
 import apiCall from './api.js';
 import loadMessage from './loadMessage.js';
-import createCommentsSection from './commentsSection';
+import createCommentsSection from './commentsSection.js';
 
 const content = document.getElementById('content');
 
 const renderCommentPopup = async (event) => {
   const pokname = event.target.id;
   loadMessage();
-  const commentsSectionItems = await createCommentsSection(event)
+  const commentsSectionItems = await createCommentsSection(event);
   const data = await apiCall(pokname);
   const commentPopup = `
 <div class="comments-popup">
