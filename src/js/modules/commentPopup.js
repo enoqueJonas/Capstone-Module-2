@@ -1,10 +1,12 @@
 import closePng from '../../assets/Img/close.png'
 import apiCall from './views/api';
+import loadMessage from './loadMessage.js'
 
 const content = document.getElementById('content');
 
 const renderCommentPopup = async () => {
   const pokname = event.target.id;
+  loadMessage();
   const data = await apiCall(pokname);
   const commentPopup = `
 <div class="comments-popup">
@@ -31,6 +33,8 @@ const renderCommentPopup = async () => {
   content.insertAdjacentHTML('afterend', commentPopup)
   const closePopup = document.querySelector('.close-popup');
   const commentPopupDiv = document.querySelector('.comments-popup');
+  const load = document.querySelector('.load');
+  load.classList.remove('active');
   closePopup.addEventListener('click', () => {
     commentPopupDiv.classList.add('active');
   })
