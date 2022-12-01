@@ -1,6 +1,6 @@
 import apiCall from './api.js';
 import Pokemon from '../models/pokemon.js';
-import renderCommentPopup from '../commentPopup.js';
+import renderCommentPopup from './commentPopup.js';
 
 const content = document.getElementById('content');
 
