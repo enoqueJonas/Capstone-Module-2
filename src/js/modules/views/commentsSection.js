@@ -1,4 +1,4 @@
-import getComments from './comments.js';
+import { getComments } from './comments.js';
 
 const createCommentsSection = async (event) => {
   let list = '';
@@ -6,7 +6,7 @@ const createCommentsSection = async (event) => {
   if (Array.isArray(comments)) {
     comments.forEach((comment) => {
       list
-            += `<p class="comments-items">
+                += `<p class="comments-items">
                 ${comment.creation_date} ${comment.username}: ${comment.comment}
             </p>`;
     });

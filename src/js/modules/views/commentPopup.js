@@ -2,6 +2,9 @@ import closePng from '../../../assets/Img/close.png';
 import apiCall from './api.js';
 import loadMessage from './loadMessage.js';
 import createCommentsSection from './commentsSection.js';
+import { getCommentsWithName } from './comments.js';
+
+const commentsCounter = require('../commentsCounter.js');
 
 const content = document.getElementById('content');
 
@@ -32,7 +35,7 @@ const renderCommentPopup = async (event) => {
   </div>
 </div>
 <div class="comment-section">
- <h3>
+ <h3 class="comment-section-title">
   Comments(2)
  </h3>
  <div class="comments">
@@ -57,9 +60,12 @@ const renderCommentPopup = async (event) => {
   const btnAddComment = document.querySelector('#btn-comment');
   const nameInput = document.querySelector('#name');
   const commentTextarea = document.querySelector('#insights');
+  const commentSectionTitle = document.querySelector('.comment-section-title');
 
   commentSectionDiv.insertAdjacentHTML('beforeend', commentsSectionItems);
   load.classList.remove('active');
+
+  let commentsArr = await getCommentsWithName(pokname);
 
   closePopup.addEventListener('click', () => {
     commentPopupDiv.classList.add('active');
@@ -91,10 +97,13 @@ const renderCommentPopup = async (event) => {
       referrerPolicy: 'no-referrer',
     }).then((response) => response.json()).catch((err) => err);
     commentsSectionItems = await createCommentsSection(event);
-    commentSectionDiv.insertAdjacentHTML('beforeend', commentsSectionItems);
+    commentSectionDiv.innerHTML = commentsSectionItems;
     nameInput.value = ' ';
     commentTextarea.value = ' ';
+    commentsArr = await getCommentsWithName(pokname);
+    commentSectionTitle.innerHTML = `Comments(${commentsCounter(commentsArr)})`;
   });
+  commentSectionTitle.innerHTML = `Comments(${commentsCounter(commentsArr)})`;
 };
 
 export default renderCommentPopup;
