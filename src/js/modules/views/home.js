@@ -2,6 +2,7 @@ import apiCall from './api.js';
 import Pokemon from '../models/pokemon.js';
 import { getPokemonLikes } from './interactions.js';
 import renderCommentPopup from './commentPopup.js';
+
 const content = document.getElementById('content');
 const createTag = (tagName, textContent = null, className = null, event = {}) => {
   const tag = document.createElement(tagName);
