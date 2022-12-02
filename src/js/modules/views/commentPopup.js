@@ -8,7 +8,7 @@ const content = document.getElementById('content');
 const renderCommentPopup = async (event) => {
   const pokname = event.target.id;
   loadMessage();
-  const commentsSectionItems = await createCommentsSection(event);
+  let commentsSectionItems = await createCommentsSection(event);
   const data = await apiCall(pokname);
   const commentPopup = `
 <div class="comments-popup">
@@ -23,7 +23,7 @@ const renderCommentPopup = async (event) => {
   <img src="${closePng}" alt="" class="close-popup" width="40px" height="40px" />
 </div>
 <div class="middle">
-  <h2 class="pokemon-name">Pok Name</h2>
+  <h2 class="pokemon-name">${data.name}</h2>
   <div class="pokemon-info">
     <p class="pokemon-details pokemon-type">Type: ${data.types[0].type.name}</p>
     <p class="pokemon-details pokemon-weight">Weight: ${data.weight}</p>
@@ -39,16 +39,61 @@ const renderCommentPopup = async (event) => {
  
  </div>
 </div>
+<div class="add-comment">
+  <h3 class="add-comment-title"> Add a comment</h3>
+  <div class="comment-form">
+    <input type="text" placeholder="Your name" id="name" required>
+    <textarea id="insights" required>Your insights</textarea>
+    <button id="btn-comment">Comment</button>
+  </div>
+</div>
 </div>`;
   content.insertAdjacentHTML('afterend', commentPopup);
+
   const closePopup = document.querySelector('.close-popup');
   const commentPopupDiv = document.querySelector('.comments-popup');
   const load = document.querySelector('.load');
   const commentSectionDiv = document.querySelector('.comments');
+  const btnAddComment = document.querySelector('#btn-comment');
+  const nameInput = document.querySelector('#name');
+  const commentTextarea = document.querySelector('#insights');
+
   commentSectionDiv.insertAdjacentHTML('beforeend', commentsSectionItems);
   load.classList.remove('active');
+
   closePopup.addEventListener('click', () => {
     commentPopupDiv.classList.add('active');
+  });
+
+  commentTextarea.addEventListener('focus', () => {
+    if (commentTextarea.value === 'Your insights') {
+      commentTextarea.value = ' ';
+      commentTextarea.style.color = 'black';
+    }
+  });
+
+  btnAddComment.addEventListener('click', async () => {
+    const name = nameInput.value;
+    const comment = commentTextarea.value;
+    const requestBody = {
+      item_id: pokname,
+      username: name,
+      comment,
+    };
+    await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/rGByQlRjNLg78HbvXRhV/comments', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestBody),
+      cache: 'no-cache',
+      credentials: 'same-origin',
+      referrerPolicy: 'no-referrer',
+    }).then((response) => response.json()).catch((err) => err);
+    commentsSectionItems = await createCommentsSection(event);
+    commentSectionDiv.insertAdjacentHTML('beforeend', commentsSectionItems);
+    nameInput.value = ' ';
+    commentTextarea.value = ' ';
   });
 };
 
