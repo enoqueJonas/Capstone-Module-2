@@ -1,3 +1,4 @@
+import getAllItemsCount from './all-items-counter.js';
 import apiCall from './api.js';
 import Pokemon from '../models/pokemon.js';
 import { getPokemonLikes, likePokemonAction } from './interactions.js';
@@ -37,7 +38,9 @@ const pokemonCard = (pokemon) => {
   }
   return listItem;
 };
-
+const displayPokemonCount = (count) => {
+  document.querySelector('#main-title').innerHTML = `Pokemon(${count})`;
+};
 const displayPokemon = () => {
   const home = createTag('ul', null, 'list');
   let likes = {};
@@ -81,6 +84,9 @@ const displayPokemon = () => {
 
 const renderHome = () => {
   content.appendChild(displayPokemon());
+  getAllItemsCount().then((res) => {
+    displayPokemonCount(res);
+  });
 };
 
 export default renderHome;
