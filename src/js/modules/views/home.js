@@ -1,6 +1,6 @@
 import apiCall from './api.js';
 import Pokemon from '../models/pokemon.js';
-import { getPokemonLikes } from './interactions.js';
+import { getPokemonLikes, likePokemonAction } from './interactions.js';
 
 const content = document.getElementById('content');
 
@@ -18,7 +18,7 @@ const pokemonCard = (pokemon) => {
   cardImage.src = `${pokemon.image}`;
   const titleDiv = createTag('div', null, null);
   const title = createTag('h2', `${pokemon.name}`, 'card-title');
-  const likeIconContainer = createTag('span', null, 'like-icon');
+  const likeIconContainer = createTag('span', null, 'like-icon', likePokemonAction);
   const likeIcon = createTag('i', null, 'fa fa-heart');
   likeIconContainer.appendChild(likeIcon);
   titleDiv.appendChild(title);
