@@ -39,17 +39,52 @@ const renderCommentPopup = async (event) => {
  
  </div>
 </div>
+<div class="add-comment">
+  <h3 class="add-comment-title"> Add a comment</h3>
+  <div class="comment-form">
+    <input type="text" placeholder="Your name" id="name" required>
+    <textarea id="insights" required>Your insights </textarea>
+    <button id="btn-comment">Comment</button>
+  </div>
+</div>
 </div>`;
   content.insertAdjacentHTML('afterend', commentPopup);
+
   const closePopup = document.querySelector('.close-popup');
   const commentPopupDiv = document.querySelector('.comments-popup');
   const load = document.querySelector('.load');
   const commentSectionDiv = document.querySelector('.comments');
+  const btnAddComment = document.querySelector('#btn-comment');
+  const nameInput = document.querySelector('#name');
+  const commentTextarea = document.querySelector('#insights');
+
   commentSectionDiv.insertAdjacentHTML('beforeend', commentsSectionItems);
   load.classList.remove('active');
+
   closePopup.addEventListener('click', () => {
     commentPopupDiv.classList.add('active');
   });
+
+  btnAddComment.addEventListener('click', async () => {
+    console.log('Enter')
+    let name = nameInput.value;
+    let comment = commentTextarea.value;
+    const requestBody = {
+      item_id: pokname,
+      username: name,
+      comment: comment,
+    }
+    await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/rGByQlRjNLg78HbvXRhV/comments`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(requestBody),
+      cache: 'no-cache',
+      credentials: 'same-origin',
+      referrerPolicy: 'no-referrer',
+    }).then((response) => response.json()).then(data => console.log(data)).catch((err) => err);
+  })
 };
 
 export default renderCommentPopup;

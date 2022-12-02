@@ -168,7 +168,7 @@
     overflow: scroll;
   }
 
-  .comment-section > * {
+  .comment-section>* {
     margin: 3.5px;
   }
 
@@ -178,5 +178,40 @@
     justify-content: center;
     align-items: flex-start;
     width: 100%;
+  }
+
+  .add-comment {
+    display: flex;
+    flex-direction: column;
+    height: 9em;
+    width: 25em;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .comment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .add-comment-title {
+    margin: 6px;
+  }
+
+  #insights {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  #btn-comment {
+    display: flex;
+    justify-content: center;
+    width: 65px;
+    height: 20px;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px black;
+    border-radius: 3px;
   }
 }
