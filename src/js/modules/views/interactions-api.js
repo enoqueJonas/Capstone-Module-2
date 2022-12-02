@@ -1,5 +1,7 @@
+const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
+const gameID = 'tys9LI3zLoPh9SclNQrX';
 export const postLikes = async (id) => {
-  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/9j4T0EvloyUNWKzzonxh/likes/', {
+  const response = await fetch(`${baseUrl}apps/${gameID}/likes/`, {
     method: 'POST',
     body: JSON.stringify({ item_id: id }),
     headers: {
@@ -10,7 +12,7 @@ export const postLikes = async (id) => {
 };
 
 export const getLikes = async () => {
-  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/9j4T0EvloyUNWKzzonxh/likes/');
+  const response = await fetch(`${baseUrl}apps/${gameID}/likes/`);
   const data = await response.json();
   return data;
 };
