@@ -1,7 +1,6 @@
 import apiCall from './api.js';
 import Pokemon from '../models/pokemon.js';
 import { getPokemonLikes, likePokemonAction } from './interactions.js';
-import { getPokemonLikes } from './interactions.js';
 import renderCommentPopup from './commentPopup.js';
 
 const content = document.getElementById('content');
