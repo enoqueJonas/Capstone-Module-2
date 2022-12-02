@@ -66,24 +66,24 @@ const renderCommentPopup = async (event) => {
   });
 
   commentTextarea.addEventListener('focus', () => {
-    if(commentTextarea.value === "Your insights"){
-      commentTextarea.value = " ";
+    if (commentTextarea.value === 'Your insights') {
+      commentTextarea.value = ' ';
       commentTextarea.style.color = 'black';
     }
-  })
+  });
 
   btnAddComment.addEventListener('click', async () => {
-    let name = nameInput.value;
-    let comment = commentTextarea.value;
+    const name = nameInput.value;
+    const comment = commentTextarea.value;
     const requestBody = {
       item_id: pokname,
       username: name,
-      comment: comment,
-    }
-    await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/rGByQlRjNLg78HbvXRhV/comments`, {
+      comment,
+    };
+    await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/rGByQlRjNLg78HbvXRhV/comments', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(requestBody),
       cache: 'no-cache',
@@ -92,9 +92,9 @@ const renderCommentPopup = async (event) => {
     }).then((response) => response.json()).catch((err) => err);
     commentsSectionItems = await createCommentsSection(event);
     commentSectionDiv.insertAdjacentHTML('beforeend', commentsSectionItems);
-    nameInput.value = " ";
-    commentTextarea.value = " ";
-  })
+    nameInput.value = ' ';
+    commentTextarea.value = ' ';
+  });
 };
 
 export default renderCommentPopup;

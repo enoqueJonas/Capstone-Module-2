@@ -168,7 +168,7 @@
     overflow: scroll;
   }
 
-  .comment-section>* {
+  .comment-section > * {
     margin: 3.5px;
   }
 
@@ -185,7 +185,6 @@
     flex-direction: column;
     height: 9em;
     width: 25em;
-
     align-items: center;
     justify-content: center;
   }
