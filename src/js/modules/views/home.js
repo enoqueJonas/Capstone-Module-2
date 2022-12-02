@@ -89,4 +89,4 @@ const renderHome = () => {
   });
 };
 
-export default renderHome;
+export {displayPokemonCount, renderHome};
