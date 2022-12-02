@@ -57,11 +57,17 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 Javascript Capstone Project based on Pokemon API <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+> This is a JavaScript Capstone project built on Pokémon API, an external API used to get the data of a popular different ebooks, and Involvement API, used to record user interactions including likes and comments. Following topic matter :
 
-**[your_project__name]** is a...
+- _Total number of items displayed_
+- _Items displayed on the home page._
+- _Each item can be liked and commented_
+- _For each item, the nuber of comment is shown_
+
+
+**Javascript Capstone Project** is a
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -72,24 +78,22 @@ After you're finished please remove all the comments and instructions!
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li>HTML & CSS</li>
+    <li>JavaScript (ES6)</li>
+    <li>Webpack</li>
+    <li>Jest Testing Library</li>
+    <li>HTML, CSS & JavaScript Linters</li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+  <ul>>
+      <li>Pokemon API</li>
+      <li>Involvement API</li>
   </ul>
 </details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
-
+i
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
