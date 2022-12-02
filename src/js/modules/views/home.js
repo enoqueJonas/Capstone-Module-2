@@ -83,7 +83,6 @@ const displayPokemon = () => {
   return home;
 };
 
-
 const renderHome = async () => {
   await content.appendChild(displayPokemon());
   getAllItemsCount().then((res) => {
