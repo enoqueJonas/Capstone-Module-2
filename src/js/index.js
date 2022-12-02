@@ -6,3 +6,5 @@ import '../assets/css/main.css';
 renderHeader();
 renderHome();
 renderFooter();
+
+document.addEventListener('DOMContentLoaded', () => 0);

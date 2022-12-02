@@ -10,7 +10,7 @@ class Pokemon {
     getLikeSentence=() => {
       let res = '';
       if (this.likes <= 1) {
-        res = '1 like';
+        res = `${this.likes} like`;
       } else {
         res = `${this.likes} likes`;
       }
