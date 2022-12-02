@@ -2,8 +2,9 @@ import closePng from '../../../assets/Img/close.png';
 import apiCall from './api.js';
 import loadMessage from './loadMessage.js';
 import createCommentsSection from './commentsSection.js';
+import { getCommentsWithName } from './comments.js';
+
 const commentsCounter = require('../commentsCounter.js');
-import { getCommentsWithName } from './comments';
 
 const content = document.getElementById('content');
 
@@ -59,7 +60,7 @@ const renderCommentPopup = async (event) => {
   const btnAddComment = document.querySelector('#btn-comment');
   const nameInput = document.querySelector('#name');
   const commentTextarea = document.querySelector('#insights');
-  const commentSectionTitle = document.querySelector('.comment-section-title')
+  const commentSectionTitle = document.querySelector('.comment-section-title');
 
   commentSectionDiv.insertAdjacentHTML('beforeend', commentsSectionItems);
   load.classList.remove('active');
@@ -100,9 +101,9 @@ const renderCommentPopup = async (event) => {
     nameInput.value = ' ';
     commentTextarea.value = ' ';
     commentsArr = await getCommentsWithName(pokname);
-    commentSectionTitle.innerHTML = `Comments(${ commentsCounter(commentsArr)})`
+    commentSectionTitle.innerHTML = `Comments(${commentsCounter(commentsArr)})`;
   });
-  commentSectionTitle.innerHTML = `Comments(${ commentsCounter(commentsArr)})`
+  commentSectionTitle.innerHTML = `Comments(${commentsCounter(commentsArr)})`;
 };
 
 export default renderCommentPopup;
