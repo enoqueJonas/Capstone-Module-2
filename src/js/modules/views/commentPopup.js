@@ -8,7 +8,7 @@ const content = document.getElementById('content');
 const renderCommentPopup = async (event) => {
   const pokname = event.target.id;
   loadMessage();
-  const commentsSectionItems = await createCommentsSection(event);
+  let commentsSectionItems = await createCommentsSection(event);
   const data = await apiCall(pokname);
   const commentPopup = `
 <div class="comments-popup">
@@ -23,7 +23,7 @@ const renderCommentPopup = async (event) => {
   <img src="${closePng}" alt="" class="close-popup" width="40px" height="40px" />
 </div>
 <div class="middle">
-  <h2 class="pokemon-name">Pok Name</h2>
+  <h2 class="pokemon-name">${data.name}</h2>
   <div class="pokemon-info">
     <p class="pokemon-details pokemon-type">Type: ${data.types[0].type.name}</p>
     <p class="pokemon-details pokemon-weight">Weight: ${data.weight}</p>
@@ -43,7 +43,7 @@ const renderCommentPopup = async (event) => {
   <h3 class="add-comment-title"> Add a comment</h3>
   <div class="comment-form">
     <input type="text" placeholder="Your name" id="name" required>
-    <textarea id="insights" required>Your insights </textarea>
+    <textarea id="insights" required>Your insights</textarea>
     <button id="btn-comment">Comment</button>
   </div>
 </div>
@@ -65,8 +65,14 @@ const renderCommentPopup = async (event) => {
     commentPopupDiv.classList.add('active');
   });
 
+  commentTextarea.addEventListener('focus', () => {
+    if(commentTextarea.value === "Your insights"){
+      commentTextarea.value = " ";
+      commentTextarea.style.color = 'black';
+    }
+  })
+
   btnAddComment.addEventListener('click', async () => {
-    console.log('Enter')
     let name = nameInput.value;
     let comment = commentTextarea.value;
     const requestBody = {
@@ -83,7 +89,11 @@ const renderCommentPopup = async (event) => {
       cache: 'no-cache',
       credentials: 'same-origin',
       referrerPolicy: 'no-referrer',
-    }).then((response) => response.json()).then(data => console.log(data)).catch((err) => err);
+    }).then((response) => response.json()).catch((err) => err);
+    commentsSectionItems = await createCommentsSection(event);
+    commentSectionDiv.insertAdjacentHTML('beforeend', commentsSectionItems);
+    nameInput.value = " ";
+    commentTextarea.value = " ";
   })
 };
 
