@@ -1,9 +1,10 @@
 import apiCall from './api.js';
 import Pokemon from '../models/pokemon.js';
 import { getPokemonLikes, likePokemonAction } from './interactions.js';
+import { getPokemonLikes } from './interactions.js';
+import renderCommentPopup from './commentPopup.js';
 
 const content = document.getElementById('content');
-
 const createTag = (tagName, textContent = null, className = null, event = {}) => {
   const tag = document.createElement(tagName);
   tag.textContent = textContent;
@@ -28,7 +29,8 @@ const pokemonCard = (pokemon) => {
   cardID.addEventListener('click', () => {
   });
   const newLigne = createTag('br', null, null);
-  const commentButton = createTag('button', 'Comments', 'comment-button');
+  const commentButton = createTag('button', 'Comments', 'comment-button', renderCommentPopup);
+  commentButton.id = pokemon.name;
 
   const rowItems = [cardImage, titleDiv, cardSubtitle, cardID, newLigne, commentButton];
 
@@ -79,8 +81,8 @@ const displayPokemon = () => {
   return home;
 };
 
-const renderHome = () => {
-  content.appendChild(displayPokemon());
+const renderHome = async () => {
+  await content.appendChild(displayPokemon());
 };
 
 export default renderHome;
