@@ -10,4 +10,16 @@ const getComments = async (event) => {
   return response;
 };
 
-export default getComments;
+const getCommentsWithName = async (pokname) => {
+    const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/rGByQlRjNLg78HbvXRhV/comments?item_id=${pokname}`, {
+      method: 'GET',
+      mode: 'cors',
+      cache: 'no-cache',
+      credentials: 'same-origin',
+      redirect: 'follow',
+      referrerPolicy: 'no-referrer',
+    }).then((response) => response.json()).catch((err) => err);
+    return response;
+  };
+
+export {getComments, getCommentsWithName};

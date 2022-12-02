@@ -3,6 +3,7 @@ import apiCall from './api.js';
 import loadMessage from './loadMessage.js';
 import createCommentsSection from './commentsSection.js';
 const commentsCounter = require('../commentsCounter.js');
+import { getCommentsWithName } from './comments';
 
 const content = document.getElementById('content');
 
@@ -96,6 +97,8 @@ const renderCommentPopup = async (event) => {
     nameInput.value = ' ';
     commentTextarea.value = ' ';
   });
+  const commentsArr = await getCommentsWithName(pokname);
+  console.log(commentsCounter(commentsArr));
 };
 
 export default renderCommentPopup;
