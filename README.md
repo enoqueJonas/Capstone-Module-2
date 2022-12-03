@@ -93,7 +93,7 @@ After you're finished please remove all the comments and instructions!
       <li>Involvement API</li>
   </ul>
 </details>
-i
+
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
@@ -128,11 +128,16 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
+  - Git
+  - GitHub
+  - Node.js
+
 <!--
 Example command:
 
-```sh
- gem install rails
+```
+  sh
+  gem install rails
 ```
  -->
 
@@ -140,51 +145,32 @@ Example command:
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
+  1. Open your terminal.
+  2. Navigate to the directory where you want to clone the project.
+  3. Run: 
+      ```sh
+        git clone https://amentetteh.github.io/leader-board-project.git          
+      ```
+  4. Open your editor and follow the steps below:
 
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
 
 ### Install
 
-Install this project with:
-
-<!--
-Example command:
+Install deendencies ackages of the project by running the coand below:
 
 ```sh
-  cd my-project
+  cd leader-board-project
   gem install
 ```
---->
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
 ```sh
-  rails server
+  npm run build
+  npm start
 ```
---->
-
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
 
 ### Deployment
 
@@ -201,22 +187,20 @@ Example:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
+## 👥 Authors
 
-## 👥 Authors <a name="authors"></a>
+## 👤 Enoque Jonas <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+- GitHub: [@enoqueJonas](https://github.com/enoqueJonas)
+- Twitter: [@enoqueJonas](https://twitter.com/enoqueJonas)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/enoqueJonas)
 
-👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+## 👤 Amen TETTEH <a name="authors"></a>
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@amentetteh](https://github.com/amentetteh)
+- Twitter: [@amentetteh](https://twitter.com/amentetteh)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/amentetteh)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -226,9 +210,8 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **implement the  API**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -262,21 +245,6 @@ I would like to thank...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FAQ (optional) -->
-
-## ❓ FAQ <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 
