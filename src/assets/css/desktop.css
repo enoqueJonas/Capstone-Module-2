@@ -1,37 +1,15 @@
 @media only screen and (min-width: 768px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
+
+  
 
   #content ul.list {
     display: grid;
     grid-template-columns: auto auto auto;
     margin: 30px 150px 90px;
     gap: 24px;
-  }
-
-  /* variables */
-  :root {
-    --white: #fff;
-    --black: black;
-  }
-
-  /* reset */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  /* body settings */
-  body {
-    background: var(--white);
-    font-family: Inter, sans-serif;
-    font-style: normal;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 
   .header {
@@ -53,12 +31,12 @@
     align-items: center;
     justify-content: center;
     margin-left: 40px;
-    border: 1px solid black;
+    border: 1px solid var(--white);
     height: 50px;
     width: 50px;
     border-radius: 30px;
     text-decoration: none;
-    color: black;
+    color: var(--white);
   }
 
   .nav-menu {
@@ -72,7 +50,7 @@
   }
 
   .nav-link {
-    color: black;
+    color: var(--white);
   }
 
   .comments-popup {
