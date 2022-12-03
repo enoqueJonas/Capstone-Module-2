@@ -3,6 +3,7 @@
   flex-direction: row;
   height: 4em;
   background: var(--blue2);
+  font-weight: bold;
 }
 
 .nav-bar {
