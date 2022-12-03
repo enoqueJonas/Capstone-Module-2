@@ -57,11 +57,17 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 Javascript Capstone Project based on Pokemon API <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+> This is a JavaScript Capstone project built on Pokémon API, an external API used to get the data of a popular different ebooks, and Involvement API, used to record user interactions including likes and comments. Following topic matter :
 
-**[your_project__name]** is a...
+- _Total number of items displayed_
+- _Items displayed on the home page._
+- _Each item can be liked and commented_
+- _For each item, the nuber of comment is shown_
+
+
+**Javascript Capstone Project** is a
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -72,21 +78,19 @@ After you're finished please remove all the comments and instructions!
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li>HTML & CSS</li>
+    <li>JavaScript (ES6)</li>
+    <li>Webpack</li>
+    <li>Jest Testing Library</li>
+    <li>HTML, CSS & JavaScript Linters</li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  <ul>>
+      <li>Pokemon API</li>
+      <li>Involvement API</li>
   </ul>
 </details>
 
@@ -124,11 +128,16 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
+  - Git
+  - GitHub
+  - Node.js
+
 <!--
 Example command:
 
-```sh
- gem install rails
+```
+  sh
+  gem install rails
 ```
  -->
 
@@ -136,51 +145,32 @@ Example command:
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
+  1. Open your terminal.
+  2. Navigate to the directory where you want to clone the project.
+  3. Run: 
+      ```sh
+        git clone https://github.com/enoqueJonas/Capstone-Module-2.git          
+      ```
+  4. Open your editor and follow the steps below:
 
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
 
 ### Install
 
-Install this project with:
-
-<!--
-Example command:
+Install deendencies ackages of the project by running the coand below:
 
 ```sh
-  cd my-project
+  cd Capstone-Module-2
   gem install
 ```
---->
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
 ```sh
-  rails server
+  npm run build
+  npm start
 ```
---->
-
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
 
 ### Deployment
 
@@ -197,22 +187,20 @@ Example:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
+## 👥 Authors
 
-## 👥 Authors <a name="authors"></a>
+## 👤 Enoque Jonas <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+- GitHub: [@enoqueJonas](https://github.com/enoqueJonas)
+- Twitter: [@enoqueJonas](https://twitter.com/enoqueJonas)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/enoqueJonas)
 
-👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+## 👤 Amen TETTEH <a name="authors"></a>
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@amentetteh](https://github.com/amentetteh)
+- Twitter: [@amentetteh](https://twitter.com/amentetteh)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/amentetteh)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -222,9 +210,8 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **implement the  API**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -258,21 +245,6 @@ I would like to thank...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FAQ (optional) -->
-
-## ❓ FAQ <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 
