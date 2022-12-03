@@ -90,4 +90,4 @@ const renderHome = async () => {
   });
 };
 
-export default renderHome;
+export { displayPokemonCount, renderHome };

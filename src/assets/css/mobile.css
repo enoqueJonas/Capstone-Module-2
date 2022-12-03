@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: row;
   height: 4em;
-  font-weight: bold;
   color: var(--white);
   background: var(--blue2);
+  font-weight: bold;
 }
 
 .nav-bar {
