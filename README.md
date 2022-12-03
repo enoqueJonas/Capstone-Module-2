@@ -149,7 +149,7 @@ Clone this repository to your desired folder:
   2. Navigate to the directory where you want to clone the project.
   3. Run: 
       ```sh
-        git clone https://amentetteh.github.io/leader-board-project.git          
+        git clone https://github.com/enoqueJonas/Capstone-Module-2.git          
       ```
   4. Open your editor and follow the steps below:
 
@@ -159,7 +159,7 @@ Clone this repository to your desired folder:
 Install deendencies ackages of the project by running the coand below:
 
 ```sh
-  cd leader-board-project
+  cd Capstone-Module-2
   gem install
 ```
 
