@@ -40,6 +40,7 @@ After you're finished please remove all the comments and instructions!
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
+  - [🚀 KANBAN Board](#kanban-board)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -115,6 +116,12 @@ After you're finished please remove all the comments and instructions!
 - [Live Demo Link](https://amentetteh.github.io/Javascript-Capstone-Project/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## KANBAN board  <a name="kanan-board"></a>
+[Link](https://github.com/enoqueJonas/Capstone-Module-2/projects/1)
+
+
 
 <!-- GETTING STARTED -->
 
