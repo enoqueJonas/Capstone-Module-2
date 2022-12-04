@@ -1,4 +1,4 @@
-const commentsCounter = require('../src/js/modules/commentsCounter.js');
+const commentsCounter = require('../modules/commentsCounter.js');
 
 describe('Comments', () => {
   it('Count commnents', () => {
@@ -20,8 +20,7 @@ describe('Comments', () => {
     expect(commentsArr.length).toBe(result);
     document.body.innerHTML = '';
     for (let i = 0; i < result; i += 1) {
-      document.body.innerHTML
-                += `
+      document.body.innerHTML += `
                     <div class="works">
                          <ul id="list"><li></li></ul>
                      </div>
