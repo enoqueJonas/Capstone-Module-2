@@ -1,5 +1,4 @@
 const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
-// const gameID = 'tys9LI3zLoPh9SclNQrX';
 const gameID = process.env.API_KEY;
 export const postLikes = async (id) => {
   const response = await fetch(`${baseUrl}apps/${gameID}/likes/`, {
