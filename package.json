@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "jest --coverage",
-    "build": "webpack --mode production",
+    "build": "yarn build",
     "start": "webpack --mode development --config webpack.config.js --watch",
     "dev": "webpack serve --open --mode development"
   },
